@@ -1,0 +1,12 @@
+.clearfix2 .el-link {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  text-align: left;
+}
+
+.relist .el-link {
+  text-align: left;
+  display: block;
+}

@@ -1,0 +1,97 @@
+
+
+
+<view class="section">
+<view class="text">校园风光</view>
+
+</view>
+<view class="swiper-container">
+<swiper next-margin="200rpx" autoplay="{{autoplay}}" interval="{{interval}}" current="{{swiperCurrent}}" circular="true" bindchange="swiperChange" class="swiper">
+<block wx:for="{{imagee}}">
+
+<swiper-item>
+<image src="{{item.imagess}}" class="img" ></image>
+</swiper-item>
+
+</block>
+</swiper>
+</view>
+
+
+
+<!--<view class='tools-container'>
+    <view class='tools-container-box'>
+      <view class='tools-item' bindtap='shangchang'>
+        <view class='tools-item-image-container'>
+          <image src='https://mmbiz.qpic.cn/mmbiz_png/JZxArCU6LRrr40fBkRJzuzFsqiboSibyyvryFWlAzKE59Dj1VhdORufOUamYZUBxAia8ygI0Sp6UVM3AhLfLPnjiaw/0?wx_fmt=png' class='tools-item-image'></image>
+        </view>
+        <view class='tools-item-text-container'>
+          <text class='tools-item-text'>查找商场</text>
+        </view>
+      </view>
+      <view class='tools-item' bindtap='ditie'>
+        <view class='tools-item-image-container'>
+          <image src='https://mmbiz.qpic.cn/mmbiz_png/JZxArCU6LRrr40fBkRJzuzFsqiboSibyyvIjhlXLR4OxCusKpO0CO8F1Zz4oMcoMPa2Yt1IpwUn93YscDAtySic9A/0?wx_fmt=png' class='tools-item-image'></image>
+        </view>
+        <view class='tools-item-text-container'>
+          <text class='tools-item-text'>查询地铁</text>
+        </view>
+      </view>
+      <view class='tools-item'  bindtap='xueshenghui'>
+        <view class='tools-item-image-container'>
+          <image src='https://mmbiz.qpic.cn/mmbiz_png/JZxArCU6LRrr40fBkRJzuzFsqiboSibyyvKK1MnsJYUIJnqXibIWJUxTwFq2EiaSfB6icQhjtUuv1CLC5lFSRkzJoibQ/0?wx_fmt=png' class='tools-item-image'></image>
+        </view>
+        <view class='tools-item-text-container'>
+          <text class='tools-item-text'>学校简介</text>
+        </view>
+      </view>
+      <view class='tools-item'  bindtap='shetuanlian'>
+        <view class='tools-item-image-container'>
+          <image src='https://mmbiz.qpic.cn/mmbiz_png/JZxArCU6LRrr40fBkRJzuzFsqiboSibyyvuekwPUW5MwuelS7uLnwQhdWJ0tjXa4HfYrodV0icURTEtUkwv3rGsvA/0?wx_fmt=png' class='tools-item-image'></image>
+        </view>
+        <view class='tools-item-text-container'>
+          <text class='tools-item-text'>给点赞助</text>
+        </view>
+      </view>
+    </view>
+  </view>-->
+
+  
+<!--这是聊天列表模板-->
+<view class="chatcontainer chat">
+<view wx:for="{{user}}">
+  <view class="chat-item flex-wrp">
+    <view class="avatar flex-item">
+      <image src="{{item.avatar}}" data-id="{{item.id}}" catchtap='communicate' ></image>
+      
+    </view>
+    <view class="chat-content flex-item" catchtap='communicate' data-id="{{item.id}}" data-text="{{item.name}}">
+      <view class="chat-source">
+        <text class="chatmate">{{item.name}}</text>
+        <text class="lasttime">{{item.status}}</text>
+      </view>
+      <text class="chat-txt">{{item.qian}}</text>
+    </view>
+  </view>
+</view>
+</view>
+
+
+<!-- 天气 -->
+<view class="container">
+<view class="weather yesterday">
+<view>
+<view class='date'>今天</view>
+<view class='location'>{{basic.name}}/{{basic.adm2}}</view>
+<view class='tmp'>{{today.tempMin}}℃~{{today.tempMax}}℃</view>
+<view class='cond_txt'>{{today.textDay}}</view>
+</view>
+<view>
+<view class='weather_icon'>
+<image src='{{todyIcon}}'></image>
+</view>
+<view class='lastUpdateDate'>最后更新：{{update}}</view>
+</view>
+</view>
+
+</view>

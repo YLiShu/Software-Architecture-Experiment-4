@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+  },
+  "navigationBarTitleText": "西柚导航系统",
+  "enablePullDownRefresh": true ,
+  "backgroundTextStyle": "dark" 
+}

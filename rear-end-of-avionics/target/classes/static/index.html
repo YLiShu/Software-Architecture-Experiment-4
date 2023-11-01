@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!--edge浏览器H5兼容设置-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--360浏览器H5兼容设置-->
+    <meta name="renderer" content="webkit"/>
+    <title>欢迎留言</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        .msg {
+            /*width: 200px;*/
+            /*height: 200px;*/
+            /*display: inline-block;*/
+        }
+    </style>
+    <script src="js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<div>
+    <!--透明层 -->
+    <div>
+        <!--表单开始-->
+        <form id="form-message">
+            <!--用户名-->
+            <div class="form-group">
+                <label>此处写下留言：</label>
+                <div class="msg">
+                    <input name="msg" type="text" placeholder="请输入留言">
+                </div>
+            </div>
+
+            <!--提交按钮-->
+            <div class="form-group">
+                <div class="col-md-8">
+                    <input id="btn-reg" type="button" value="提交"/>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    $("#btn-reg").click(function () {
+        console.log($("#form-message").serialize());
+        $.ajax({
+            url: "/message/create",
+            type: "POST",
+            data: $("#form-message").serialize(),
+            dataType: "json",
+            success: function (json) {
+                if (json.state == 200) {
+                    alert("留言成功！");
+                } else {
+                    alert("留言失败！" + json.message);
+                }
+            },
+            error: function (xhr) {
+                alert("留言产生未知错误！" + xhr.status);
+            }
+        });
+    });
+</script>
+
+</body>
+
+</html>

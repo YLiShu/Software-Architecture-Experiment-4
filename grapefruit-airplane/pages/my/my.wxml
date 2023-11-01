@@ -1,0 +1,132 @@
+
+    <block wx:if="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+    </block>
+    <block wx:else>
+<!--form bindsubmit="submit" report-submit="true"-->
+<view class="userinfo-1" catchtap='update'>
+    <image class="userinfo-avatar" src='{{userInfo.avatarUrl}}'></image>
+    <view class='userinfo-2'>
+  <view class="userinfo-nickname" lang="zh_CN"> {{userInfo.nickName}}</view>
+  <image src='https://mmbiz.qpic.cn/mmbiz_png/JZxArCU6LRribpVmzlUNGvYVU4jojoICBgUpnGLict6nR0fMZXICuwibJPfPt1Z939rHZBbYFIbkibvKWZ0MvfDNIQ/0?wx_fmt=png' style='width:20px;height:20px;' ></image>
+</view>
+    <button bindtap="we" class='edit'>关于我们</button>
+</view>
+<!--/form-->
+
+<!-->
+<view class='dz-sc-fs'>
+  <view class='geshi'>
+    <text class='num'>0</text>
+    <text class='con'>心愿</text>
+  </view>
+
+  <view class='geshi'>
+    <text class='num'>0</text>
+    <text class='con'>收藏</text>
+  </view>
+
+  <view class='geshi'>
+    <text class='num'>0</text>
+    <text class='con'>验机</text>
+  </view>
+</view>
+</-->
+<image bindtap="wee" class='dz-sc-fss'  src='https://img.cdn.sugarat.top/mdImg/MTY0MzM3MTE5NjIwNA==F5CF0E43E52A6D813C50207530E_626E6788_5FB64.jpg'/> 
+ 
+<view class='tools-container'> 
+    <view class='tools-container-box'> 
+       
+ 
+      <view class='tools-item' bindtap='xiaohui'> 
+        <view class='tools-item-image-container'> 
+          <image src='https://img.cdn.sugarat.top/mdImg/MTY0MzM2ODk3NDkwOA==R-C.jfif' class='tools-item-image'></image> 
+        </view> 
+        <view class='tools-item-text-container'> 
+          <text class='tools-item-text'>西柚官微</text> 
+        </view> 
+      </view> 
+      <view class='tools-item' bindtap='xueshenghui'> 
+        <view class='tools-item-image-container'> 
+          <image src='https://img.cdn.sugarat.top/mdImg/MTY0MzM2OTIyMzg2NA==5185cc6185ce098356f8b1cd143dc62.jpg' class='tools-item-image'></image> 
+        </view> 
+        <view class='tools-item-text-container'> 
+          <text class='tools-item-text'>石大组工</text> 
+        </view> 
+      </view> 
+      <view class='tools-item'  bindtap='shetuanlian'> 
+        <view class='tools-item-image-container'> 
+          <image src='https://img.cdn.sugarat.top/mdImg/MTY0MzM2OTE5ODE3NQ==OIP-C.jfif' class='tools-item-image'></image> 
+        </view> 
+        <view class='tools-item-text-container'> 
+          <text class='tools-item-text'>校社团联</text> 
+        </view> 
+      </view> 
+ 
+      <view class='tools-item'  bindtap='disiji'> 
+        <view class='tools-item-image-container'> 
+          <image src='https://img.cdn.sugarat.top/mdImg/MTY0MzM2OTI2ODE1OQ==bdb50bea397937061a10c3268d915cb.jpg' class='tools-item-image'></image> 
+        </view> 
+        <view class='tools-item-text-container'> 
+          <text class='tools-item-text'>西柚后勤</text> 
+        </view> 
+      </view> 
+    </view> 
+</view> 
+ 
+<!-- <view class='dz'> 
+  <image bindtap="wee" src='https://mmbiz.qpic.cn/mmbiz_png/JZxArCU6LRribpVmzlUNGvYVU4jojoICBbENElTtjicyOZDXcajPoxrK9fwEl8ZAviceZXtblrkXNZwibovO0Ur38Q/0?wx_fmt=png' style='width:40rpx;height:40rpx;'></image> 
+  <text bindtap="wee" class='font-icon'>我的收藏</text> 
+  <view bindtap="wee" class='right'> 
+  <image src='https://mmbiz.qpic.cn/mmbiz_png/JZxArCU6LRribpVmzlUNGvYVU4jojoICBXVtuvWp6aYD1cqtaSwDKlCxia1krjccM6QNP8VtQG2VnxawrN7FQp5Q/0?wx_fmt=png' style='width:30px;height:30px;'/> 
+  </view> 
+</view> 
+ 
+<view class='dz'> 
+  <image bindtap="wee" src='https://mmbiz.qpic.cn/mmbiz_png/JZxArCU6LRribpVmzlUNGvYVU4jojoICB6qbS167PBlibWjQ5c42tyTvibnoChFp1vwRP72sgcjyGWX2mYFBIMGTA/0?wx_fmt=png' style='width:40rpx;height:40rpx;'></image> 
+  <text bindtap="wee" class='font-icon'>我的评论</text> 
+  <view bindtap="wee" class='right'> 
+  <image src='https://mmbiz.qpic.cn/mmbiz_png/JZxArCU6LRribpVmzlUNGvYVU4jojoICBXVtuvWp6aYD1cqtaSwDKlCxia1krjccM6QNP8VtQG2VnxawrN7FQp5Q/0?wx_fmt=png' style='width:30px;height:30px;'/> 
+  </view> 
+</view> --> 
+ 
+<view class='dz' catchtap='invest'> 
+  <image bindtap="wee" src='https://mmbiz.qpic.cn/mmbiz_png/JZxArCU6LRribpVmzlUNGvYVU4jojoICBN6Z2Cp4HfAibFV3tLlwibwAlMLUAJia8LKd3QlrqKX9kM8sPuIs6obnzQ/0?wx_fmt=png' style='width:40rpx;height:40rpx;'></image> 
+  <text bindtap="wee" class='font-icon'>软件声明</text> 
+  <view bindtap="wee" class='right'> 
+  <image src='https://mmbiz.qpic.cn/mmbiz_png/JZxArCU6LRribpVmzlUNGvYVU4jojoICBXVtuvWp6aYD1cqtaSwDKlCxia1krjccM6QNP8VtQG2VnxawrN7FQp5Q/0?wx_fmt=png' style='width:30px;height:30px;'/> 
+  </view> 
+</view> 
+ 
+ 
+<view class='dz' catchtap="contact"> 
+  <image bindtap="wee"src='https://mmbiz.qpic.cn/mmbiz_png/JZxArCU6LRribpVmzlUNGvYVU4jojoICBvbcnozusTbJ7libiblF3GacWa4qR2WaXUEOIiby9mnLO7e4mZg2BdqMyQ/0?wx_fmt=png' style='width:40rpx;height:40rpx;'></image> 
+  <text bindtap="wee" class='font-icon'>联系我们</text> 
+  <view bindtap="wee" class='right'> 
+  <image src='https://mmbiz.qpic.cn/mmbiz_png/JZxArCU6LRribpVmzlUNGvYVU4jojoICBXVtuvWp6aYD1cqtaSwDKlCxia1krjccM6QNP8VtQG2VnxawrN7FQp5Q/0?wx_fmt=png' style='width:30px;height:30px;'/> 
+  </view> 
+</view> 
+ 
+<view class='qtzp'> 
+  热门推荐 
+</view> 
+<swiper next-margin="200rpx" autoplay="{{autoplay}}" interval="{{interval}}" current="{{swiperCurrent}}" circular="true"> 
+  <swiper-item class='back center'> 
+    <image class='back center' src='https://img.cdn.sugarat.top/mdImg/MTY0MzM3MTI4NjE1Ng==hj.jpg'></image> 
+  </swiper-item> 
+ 
+  <swiper-item class='back center'> 
+    <image class='back center' src='https://img.cdn.sugarat.top/mdImg/MTY0MzM3MTMwOTk5NA==10.jpg'></image> 
+  </swiper-item> 
+ 
+ 
+  <swiper-item class='back center'> 
+    <image class='back center' src='https://img.cdn.sugarat.top/mdImg/MTY0MzM3MTM0Mjg4NA==feishu20211103-174604.jpg'></image> 
+  </swiper-item> 
+ 
+  <swiper-item class='back center'> 
+    <image class='back center' src='https://img.cdn.sugarat.top/mdImg/MTY0MzM3MTM2Mzk5MQ==feishu20220110-164936.jpg'></image> 
+  </swiper-item> 
+</swiper> 
+<view class='foot'></view> 
+    </block> 

@@ -1,0 +1,27 @@
+spring:
+  thymeleaf:
+    cache: false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://8.130.13.240:3306/message?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: ayesha
+    password:
+    hikari:
+      pool-name: DateHikariCP
+      minimum-idle: 5
+      idle-timeout: 1800000
+      maximum-pool-size: 10
+      auto-commit: true
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+
+#mybatis-plus
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  type-aliases-package: com.ayesha.message.pojo
+
+#mybatis SQL
+logging:
+  level:
+    com.ayesha.seckill.mapper: debug

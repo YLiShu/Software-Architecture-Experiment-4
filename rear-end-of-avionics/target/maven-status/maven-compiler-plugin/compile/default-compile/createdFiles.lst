@@ -1,0 +1,7 @@
+com\ayesha\message\pojo\Message.class
+com\ayesha\message\util\JsonResult.class
+com\ayesha\message\MessageApplication.class
+com\ayesha\message\service\IMessageService.class
+com\ayesha\message\service\impl\MessageServiceImpl.class
+com\ayesha\message\controller\MessageController.class
+com\ayesha\message\mapper\MessageMapper.class
